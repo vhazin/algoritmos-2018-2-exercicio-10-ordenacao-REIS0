@@ -19,7 +19,8 @@ int main(void) {
 	int nsc = 0; /* nao se comportou */
 	char myArray[size][20];
 	char simbol;
-
+	
+	int i;
 	for (int i = 0; i < size; i++) {
 		scanf(" %c %s", &simbol, myArray[i]);
 		if (simbol == '+') {
@@ -48,6 +49,7 @@ int partition(char array[][20], int low, int high) {
 	char pivot[20];
 	strcpy(pivot, array[high]);
 	char i = low-1;
+	int j;
 	for (int j = low; j <= high-1; j++) {
 		if (strcmp(array[j], pivot) < 0) {
 			i++;
@@ -67,6 +69,7 @@ int partition(char array[][20], int low, int high) {
 }
 
 void printArray(char array[][20], int sizeArray) {
+	int i;
 	for (int i = 0; i < sizeArray; i++) {
 		printf("%s\n", array[i]);
 	}
