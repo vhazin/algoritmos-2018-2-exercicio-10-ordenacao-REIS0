@@ -21,7 +21,7 @@ int main(void) {
 	char simbol;
 	
 	int i;
-	for (int i = 0; i < size; i++) {
+	for (i = 0; i < size; i++) {
 		scanf(" %c %s", &simbol, myArray[i]);
 		if (simbol == '+') {
 			sc++;
@@ -50,7 +50,7 @@ int partition(char array[][20], int low, int high) {
 	strcpy(pivot, array[high]);
 	char i = low-1;
 	int j;
-	for (int j = low; j <= high-1; j++) {
+	for (j = low; j <= high-1; j++) {
 		if (strcmp(array[j], pivot) < 0) {
 			i++;
 			/* swap */
@@ -70,7 +70,7 @@ int partition(char array[][20], int low, int high) {
 
 void printArray(char array[][20], int sizeArray) {
 	int i;
-	for (int i = 0; i < sizeArray; i++) {
+	for (i = 0; i < sizeArray; i++) {
 		printf("%s\n", array[i]);
 	}
 }
